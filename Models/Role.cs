@@ -1,5 +1,6 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Blog.Models;
 
-public class Role
-{
-}
+[Table("[Role]")]
+public class Role : BaseModel { }
