@@ -10,6 +10,11 @@ public class Repository<T> where T : class
 
     public Repository(SqlConnection connection)
         => _connection = connection;
+
+    public Repository()
+    {
+    }
+
     public IEnumerable<T> Get()
         => _connection.GetAll<T>();
 
