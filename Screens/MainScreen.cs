@@ -37,6 +37,9 @@ public static class MainScreen
             case 4:
                 MenuTagScreen.Load();
                 break;
+            case 7:
+                ReportScreen.Load();
+                break;
             case 8:
                 Environment.Exit(0);
                 break;

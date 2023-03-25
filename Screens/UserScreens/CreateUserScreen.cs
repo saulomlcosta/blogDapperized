@@ -9,7 +9,7 @@ public static class CreateUserScreen
     public static void Load()
     {
         Console.Clear();
-        Console.WriteLine("Create tag");
+        Console.WriteLine("Create user");
         Console.WriteLine("---------------");
         Console.WriteLine();
         Console.WriteLine("Name:");

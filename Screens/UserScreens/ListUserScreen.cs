@@ -10,7 +10,7 @@ public static class ListUserScreen
     public static void Load()
     {
         Console.Clear();
-        Console.WriteLine("Tag List");
+        Console.WriteLine("User List");
         Console.WriteLine("---------------");
         Console.WriteLine();
         List();
@@ -26,6 +26,18 @@ public static class ListUserScreen
         foreach (var item in users)
         {
             Console.WriteLine($"{item.Id} - {item.Name} - {item.Slug}");
+        }
+    }
+
+    public static void ListWithRoles()
+    {
+        var repository = new UserRepository(Database.Connection);
+        var users = repository.GetWithRoles();
+        foreach (var item in users)
+        {
+            Console.WriteLine($"{item.Id} - {item.Name} - {item.Email}");
+            foreach (var role in item.Roles)
+                Console.WriteLine($"- {role.Name}");
         }
     }
 }
